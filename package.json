@@ -1,10 +1,14 @@
 {
   "name": "chat-app-web-dev-journey",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sample Chat App [Web-Dev-Journey]",
   "main": "index.js",
   "scripts": {
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "10.16.3"
   },
   "author": "Vikas",
   "license": "ISC",
