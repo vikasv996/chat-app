@@ -23,5 +23,21 @@ io.on('connection', (socket) => {
 
     socket.on('disconnect', () => {
         console.log("User disconnected");
-    })
+    });
+
+    socket.emit('newMessage', {
+        from: "Admin",
+        text: "Welcome to the Chat App",
+        createdAt: new Date()
+    });
+
+    socket.broadcast.emit('newMessage', {
+        from: "Admin",
+        text: "New user has joined",
+        createdAt: new Date()
+    });
+
+    socket.on('createMessage', (message) => {
+        console.log("Create message", message);
+    });
 });
